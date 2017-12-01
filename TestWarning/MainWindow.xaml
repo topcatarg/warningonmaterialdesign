@@ -1,0 +1,31 @@
+﻿<Window x:Class="TestWarning.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestWarning"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="343*"/>
+            <ColumnDefinition Width="174*"/>
+        </Grid.ColumnDefinitions>
+        <materialDesign:Card 
+            x:Name="Progreso"
+            Padding="4"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            UniformCornerRadius="14"
+            Visibility="Hidden" 
+            >
+            <ProgressBar
+                IsIndeterminate="True"
+                Style="{StaticResource MaterialDesignCircularProgressBar}"
+                Value="50" />
+        </materialDesign:Card>
+        <Button Content="Push me!" Grid.Column="1" HorizontalAlignment="Left" Margin="53,84,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click"/>
+    </Grid>
+</Window>
